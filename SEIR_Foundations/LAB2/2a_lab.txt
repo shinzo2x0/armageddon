@@ -89,7 +89,7 @@ Expected: 200/301 → 200
 aws wafv2 get-web-acl \
   --name jalen-cf-waf01 \
   --id 206c4bc9-7a8d-4910-ac7f-fb0de76bbeef \
-  --scope CloudFront \
+  --scope CLOUDFRONT \
   --region us-east-1
 
 And confirm distribution references it:

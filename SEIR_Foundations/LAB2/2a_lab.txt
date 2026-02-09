@@ -86,10 +86,11 @@ B) CloudFront access should succeed
 Expected: 200/301 → 200
 
 2) WAF moved to CloudFront
-  aws wafv2 get-web-acl \
-  --name <project>-cf-waf01 \
-  --scope CLOUDFRONT \
-  --id <WEB_ACL_ID>
+aws wafv2 get-web-acl \
+  --name jalen-cf-waf01 \
+  --id 206c4bc9-7a8d-4910-ac7f-fb0de76bbeef \
+  --scope CloudFront \
+  --region us-east-1
 
 And confirm distribution references it:
   aws cloudfront get-distribution \
